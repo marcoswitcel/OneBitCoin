@@ -4,7 +4,8 @@ export default StyleSheet.create({
     headerPrice: {
        width: "100%",
        height: "auto",
-       alignItems: "center"
+       alignItems: "center",
+       marginBottom: 20,
     } ,
     currentPrice: {
         color: "#f50d41",

@@ -1,7 +1,11 @@
 import React from "react";
 import { View } from "react-native";
+import styles from "./styles.js";
 
 
-export default () => (
-    <View>Exemplo</View>
+export const HistoryGraphic = () => (
+    <View style={styles.contentGraphic}>
+    </View>
 )
+
+export default HistoryGraphic;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import CurrentPrice from "./src/components/CurrentPrice";
+import HistoryGraphic from "./src/components/HistoryGraphic";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         barStyle="light-content"
       />
       <CurrentPrice />
+      <HistoryGraphic />
     </SafeAreaView>
   );
 }
