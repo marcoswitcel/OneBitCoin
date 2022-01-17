@@ -25,7 +25,7 @@
         "backgroundColor": "#000000"
       },
       "package": "com.onebitcode.onebitcoin",
-      "version": 1
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
