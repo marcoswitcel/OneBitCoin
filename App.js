@@ -75,6 +75,7 @@ export default function App() {
   const [ coinsGraphictList, setCoinsGraphictList ] = useState([0]);
   const [ days, setDays ] = useState(30);
   const [ updateData, setUpdateData ] = useState(true);
+  const [ price, setPrice ] = useState(0);
 
   /**
    * @param {number} number 
@@ -85,10 +86,17 @@ export default function App() {
     setUpdateData(true);
   }
 
+  const priceCotation = (data) => {
+    setPrice(data.pop());
+  }
+
   useEffect(() => {
     getListCoins(url(days)).then(setCoinstList);
     // @TODO chamada duplicada, os dados já existem na outra chamda
-    getPriceCoinsGraphic(url(days)).then(setCoinsGraphictList);
+    getPriceCoinsGraphic(url(days)).then((data) => {
+      setCoinsGraphictList(data);
+      priceCotation(data);
+    });
     // @TODO Checar se esse useEffect está realizando chamadas excessivas
     if (updateData) {
       setUpdateData(false);
@@ -101,7 +109,7 @@ export default function App() {
         backgroundColor="#f50d41"
         barStyle="light-content"
       />
-      <CurrentPrice />
+      <CurrentPrice lastCotation={price} />
       <HistoryGraphic infoDataGraphic={coinsGraphictList} />
       <QuotationsList filterDay={updateDay} listTransaction={coinstList} />
     </SafeAreaView>

@@ -2,11 +2,14 @@ import React from "react";
 import { Text, View } from "react-native";
 import styles from "./styles.js";
 
-
-export const CurrentPrice = () => (
+/**
+ * @param {object} param0 
+ * @param {number} param0.lastCotation
+ */
+export const CurrentPrice = ({ lastCotation }) => (
     <View style={styles.headerPrice}>
-        <Text style={styles.currentPrice}>$ 5433.11</Text>
-        <Text style={styles.textPrice}>Última cotação: $ 5433.11</Text>
+        <Text style={styles.currentPrice}>$ {lastCotation.toFixed(2)}</Text>
+        <Text style={styles.textPrice}>Última cotação</Text>
     </View>
 )
 
