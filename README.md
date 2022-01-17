@@ -36,8 +36,13 @@ $ npm install react-native-chart-kit
 $ npm install react-native-svg
 ```
 
+## O que falta?
+
+Gerar as imagens da Splash Screen, favicon, e gerar um build.
+
 ## Referências
 
 - Instalação da ferramenta ExpoCli [https://docs.expo.dev/get-started/installation/](https://docs.expo.dev/get-started/installation/)
 - Utilização do `jsconfig.json` e diretiva de compilação `checkJs` [https://code.visualstudio.com/docs/languages/jsconfig](https://code.visualstudio.com/docs/languages/jsconfig)
-- [React Native Chart Kit Documentation: https://github.com/indiespirit/react-native-chart-kit](https://github.com/indiespirit/react-native-chart-kit)
+- React Native Chart Kit Documentation: [https://github.com/indiespirit/react-native-chart-kit](https://github.com/indiespirit/react-native-chart-kit)
+- Gerando um APK: [https://docs.expo.dev/classic/building-standalone-apps/](https://docs.expo.dev/classic/building-standalone-apps/)
