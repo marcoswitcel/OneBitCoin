@@ -1,6 +1,7 @@
 # App OneBitCoin
 
 O material didático em vídeo estudado pode ser encontrado no YouTube, na playlist [Curso React Native (aprendize) - One Bit Code](https://www.youtube.com/playlist?list=PLdDT8if5attEd4sRnZBIkNihR-_tE612_).
+
 É uma série de vídeos sobre desenvolvimento de aplições mobile com React Native.
 
 ## Rodando e testando
