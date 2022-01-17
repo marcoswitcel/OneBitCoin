@@ -3,7 +3,6 @@ import { Platform, SafeAreaView, StatusBar, StyleSheet, Text, View } from "react
 import CurrentPrice from "./src/components/CurrentPrice";
 import HistoryGraphic from "./src/components/HistoryGraphic";
 import QuotationsList from "./src/components/QuotationsList";
-import QuotationsItems from "./src/components/QuotationsList/QuotationsItems";
 
 /**
  * Faz com que números
@@ -73,7 +72,7 @@ async function getPriceCoinsGraphic(url) {
 
 export default function App() {
   const [ coinstList, setCoinstList ] = useState([]);
-  const [ coinsGraphictList, setCoinsGraphictList ] = useState([ 0 ]);
+  const [ coinsGraphictList, setCoinsGraphictList ] = useState([0]);
   const [ days, setDays ] = useState(30);
   const [ updateData, setUpdateData ] = useState(true);
 
@@ -104,8 +103,7 @@ export default function App() {
       />
       <CurrentPrice />
       <HistoryGraphic />
-      <QuotationsList />
-      <QuotationsItems />
+      <QuotationsList filterDay={updateDay} listTransaction={coinstList} />
     </SafeAreaView>
   );
 }
