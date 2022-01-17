@@ -31,9 +31,13 @@ Esse repositório foi criado usando a `expo-cli`
 ```bash
 # criando o projeto com o expo (template blank)
 $ expo init OneBitCoin
+# Instalando as dependências pra gerar os gráficos
+$ npm install react-native-chart-kit
+$ npm install react-native-svg
 ```
 
 ## Referências
 
 - Instalação da ferramenta ExpoCli [https://docs.expo.dev/get-started/installation/](https://docs.expo.dev/get-started/installation/)
 - Utilização do `jsconfig.json` e diretiva de compilação `checkJs` [https://code.visualstudio.com/docs/languages/jsconfig](https://code.visualstudio.com/docs/languages/jsconfig)
+- [React Native Chart Kit Documentation: https://github.com/indiespirit/react-native-chart-kit](https://github.com/indiespirit/react-native-chart-kit)

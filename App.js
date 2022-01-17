@@ -102,7 +102,7 @@ export default function App() {
         barStyle="light-content"
       />
       <CurrentPrice />
-      <HistoryGraphic />
+      <HistoryGraphic infoDataGraphic={coinsGraphictList} />
       <QuotationsList filterDay={updateDay} listTransaction={coinstList} />
     </SafeAreaView>
   );
