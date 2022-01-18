@@ -75,7 +75,7 @@ function formatPriceCoinsGraphic(bpi) {
 export default function App() {
   const [ coinstList, setCoinstList ] = useState([]);
   const [ coinsGraphictList, setCoinsGraphictList ] = useState([0]);
-  const [ days, setDays ] = useState(30);
+  const [ days, setDays ] = useState(7);
   const [ updateData, setUpdateData ] = useState(true);
   const [ price, setPrice ] = useState(0);
 
