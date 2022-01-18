@@ -91,16 +91,16 @@ export default function App() {
   }
 
   useEffect(() => {
+    if (!updateData) return;
+
     getListCoins(url(days)).then(setCoinstList);
     // @TODO chamada duplicada, os dados já existem na outra chamda
     getPriceCoinsGraphic(url(days)).then((data) => {
       setCoinsGraphictList(data);
       priceCotation(data);
     });
-    // @TODO Checar se esse useEffect está realizando chamadas excessivas
-    if (updateData) {
-      setUpdateData(false);
-    }
+    setUpdateData(false);
+
   }, [updateData]);
 
   return (
