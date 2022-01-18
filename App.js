@@ -39,15 +39,22 @@ function url(qtdDay) {
 }
 
 /**
+ * Faz o fetch dos dados da API de histórico de cotações
  * 
- * @param {string} url 
- * @returns {Promise<{data: string, valor: number}[]>}
+ * @param {number} days 
+ * @returns {Promise<object[]>}
  */
-async function getListCoins(url) {
-  const response = await fetch(url);
+async function fetchBPI(days) {
+  const response = await fetch(url(days));
   const json = await response.json();
-  const bpi = json.bpi;
+  return json.bpi;
+}
 
+/**
+ * @param {object[]} bpi 
+ * @returns {{data: string, valor: number}[]}
+ */
+function formatListCoins(bpi) {
   return Object.keys(bpi)
     .map(key => ({
       data: key.split("-").reverse().join("/"),
@@ -57,15 +64,10 @@ async function getListCoins(url) {
 }
 
 /**
- * 
- * @param {string} url 
- * @returns {Promise<number[]>}
+ * @param {object[]} bpi 
+ * @returns {number[]}
  */
-async function getPriceCoinsGraphic(url) {
-  const response = await fetch(url);
-  const json = await response.json();
-  const bpi = json.bpi;
-
+function formatPriceCoinsGraphic(bpi) {
   return Object.keys(bpi)
     .map(key => bpi[key]);
 }
@@ -93,11 +95,12 @@ export default function App() {
   useEffect(() => {
     if (!updateData) return;
 
-    getListCoins(url(days)).then(setCoinstList);
-    // @TODO chamada duplicada, os dados já existem na outra chamda
-    getPriceCoinsGraphic(url(days)).then((data) => {
-      setCoinsGraphictList(data);
-      priceCotation(data);
+    fetchBPI(days).then((bpi) => {
+      // nova lista de valores
+      setCoinstList(formatListCoins(bpi));
+      // novos valores do gráfico
+      setCoinsGraphictList(formatPriceCoinsGraphic(bpi));
+      priceCotation(formatPriceCoinsGraphic(bpi));
     });
     setUpdateData(false);
 
