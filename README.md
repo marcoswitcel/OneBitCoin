@@ -40,6 +40,9 @@ $ npm install react-native-svg
 
 Gerar as imagens da Splash Screen, favicon, e gerar um build.
 
+- Tutorial da Splash Screen: [https://docs.expo.dev/guides/splash-screens/](https://docs.expo.dev/guides/splash-screens/)
+- Gerando um APK: [https://docs.expo.dev/classic/building-standalone-apps/](https://docs.expo.dev/classic/building-standalone-apps/)
+
 ## Referências
 
 - Instalação da ferramenta ExpoCli [https://docs.expo.dev/get-started/installation/](https://docs.expo.dev/get-started/installation/)
