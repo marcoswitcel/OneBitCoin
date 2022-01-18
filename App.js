@@ -88,10 +88,6 @@ export default function App() {
     setUpdateData(true);
   }
 
-  const priceCotation = (data) => {
-    setPrice(data.pop());
-  }
-
   useEffect(() => {
     if (!updateData) return;
 
@@ -99,8 +95,9 @@ export default function App() {
       // nova lista de valores
       setCoinstList(formatListCoins(bpi));
       // novos valores do gráfico
-      setCoinsGraphictList(formatPriceCoinsGraphic(bpi));
-      priceCotation(formatPriceCoinsGraphic(bpi));
+      const newValueList = formatPriceCoinsGraphic(bpi);
+      setCoinsGraphictList(newValueList);
+      setPrice(newValueList[newValueList.length - 1]);
     });
     setUpdateData(false);
 
