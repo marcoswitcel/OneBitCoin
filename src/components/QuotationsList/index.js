@@ -48,6 +48,7 @@ export const QuotationsList = ({ filterDay, listTransaction }) => (
                 renderItem={({ item }) => (
                     <QuotationsItems valor={item.valor} data={item.data} />
                 )}
+                keyExtractor={(item) => item.data}
             />
         </ScrollView>
    </Fragment>
