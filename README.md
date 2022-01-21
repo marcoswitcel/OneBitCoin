@@ -9,16 +9,16 @@ Primeiro instale o `Expo`, caso não tenha.
 [Documentação detalhada para instalar](https://docs.expo.dev/get-started/installation/), ou digite o sguinte comando no terminal:
 
 ```bash
-$ npm install --global expo-cli
+npm install --global expo-cli
 ```
 
 A partir daí basta clonar este repositório, instalar as dependências do NodeJS e rodar `npm run start`.
 Exemplo completo abaixo:
 
 ```bash
-$ cd <pasta-deste-repositorio>
-$ npm install
-$ npm run start
+cd <pasta-deste-repositorio>
+npm install
+npm run start
 ```
 
 Para testar, será necessário instalar o [App do Expo na Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US), ou na Apple Store se tiver um Iphone.
@@ -30,10 +30,10 @@ Esse repositório foi criado usando a `expo-cli`
 
 ```bash
 # criando o projeto com o expo (template blank)
-$ expo init OneBitCoin
+expo init OneBitCoin
 # Instalando as dependências pra gerar os gráficos
-$ npm install react-native-chart-kit
-$ npm install react-native-svg
+npm install react-native-chart-kit
+npm install react-native-svg
 ```
 
 ## O que falta?
